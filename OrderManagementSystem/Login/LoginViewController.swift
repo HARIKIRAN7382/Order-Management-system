@@ -20,11 +20,14 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        fetchUsers()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        fetchUsers()
     }
     
     func fetchUsers(){
